@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { MONGO_CONNECT } = require("./config");
+const MONGO_CONNECT = process.env.MONGO_CONNECT;
 
 mongoose.connect(MONGO_CONNECT, {
   useNewUrlParser: true,
