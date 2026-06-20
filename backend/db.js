@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
-const MONGO_CONNECT = process.env.MONGO_CONNECT;
+const MONGO_CONNECT = process.env.MONGO_URI;
 
-mongoose.connect(MONGO_CONNECT, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(MONGO_CONNECT);
 
 const userSchema = new mongoose.Schema({
   email: {
